@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TreeStudio - Tree Data Structures</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🌳 TreeStudio - Tree Case Studies</h1>
+<p class="subtitle">Algebraic Expression Tree | Tic-Tac-Toe Game Tree | File Directory System</p>
+
+<div class="nav">
+  <button class="nav-btn active" onclick="show('expr')">Expression Tree</button>
+  <button class="nav-btn" onclick="show('file')">File System</button>
+  <button class="nav-btn" onclick="show('game')">Tic Tac Toe</button>
+</div>
+
+<!-- Expression -->
+<div id="expr" class="section active">
+  <h2>1. Algebraic Expression Tree</h2>
+  <p class="info">Build trees from postfix expressions and evaluate them</p>
+  
+  <div class="control-group">
+    <div>
+      <label>Postfix Expression:</label><br>
+      <input id="exprInput" placeholder="e.g., 3 4 + 2 * (spaces between values)" value="5 3 +">
+      <button onclick="buildAndDrawTree()">Build & Visualize</button>
+    </div>
+    
+    <div>
+      <label>Expression Result:</label>
+      <div id="exprResult" class="result-box">-</div>
+    </div>
+  </div>
+
+  <svg id="exprSvg" width="800" height="500"></svg>
+</div>
+
+<!-- File System -->
+<div id="file" class="section">
+  <h2>2. File Directory System</h2>
+  <p class="info">Create hierarchical folder structures with parent-child relationships</p>
+  
+  <div class="control-group">
+    <div>
+      <label>Create New Folder:</label><br>
+      <input id="folderName" placeholder="Folder name" value="">
+      <button onclick="addFolder()">Add Folder</button>
+    </div>
+
+    <div>
+      <label>Create Nested Path:</label><br>
+      <input id="pathInput" placeholder="path/to/folder" value="">
+      <button onclick="addPath()">Create Path</button>
+    </div>
+  </div>
+
+  <div class="file-explorer">
+    <h3>Directory Structure</h3>
+    <ul id="tree" class="tree-list"></ul>
+    <button onclick="resetFileSystem()" style="margin-top: 15px;">Reset</button>
+  </div>
+</div>
+
+<!-- Game -->
+<div id="game" class="section">
+  <h2>3. Tic-Tac-Toe Game Tree</h2>
+  <p class="info">Game tree with minimax algorithm for optimal AI moves</p>
+  
+  <div class="control-group">
+    <label>You are X | AI is O</label><br>
+    <button onclick="resetGame()">New Game</button>
+    <span id="status" class="status"></span>
+  </div>
+
+  <div id="board" class="board"></div>
+  <p id="gameInfo" class="game-info"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

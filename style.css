@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.nav {
+  margin-bottom: 20px;
+}
+
+.nav-btn {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.nav-btn.active {
+  background: #6c63ff;
+  color: white;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.control-group {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 8px;
+  margin: 5px;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  background: #6c63ff;
+  color: white;
+  border-radius: 5px;
+}
+
+.result-box {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  width: 100px;
+  margin: auto;
+}
+
+/* File System */
+.file-explorer {
+  text-align: left;
+  margin: 20px auto;
+  width: 300px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.tree-list ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.tree-list li {
+  margin: 5px 0;
+}
+
+/* Game */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border: 2px solid #333;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.status {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.game-info {
+  margin-top: 10px;
+  color: #555;
+}
